@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root{
+  width: 100%;
+  height: 100%;
+
+}
+
+.ant-layout{
+  height: 100%;
+}
+
+.ant-layout-sider-children{
+  background-color: #fff;
+}
+
+.ant-layout-header {
+  background-color: #fff;
+}
+
+.add-button{
+  padding: 16px 24px;
+  margin-bottom: 24px;
+}
+
+.label {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.submit-button{
+  width: 100%;
+}
+
+.banners{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
