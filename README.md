@@ -11,3 +11,4 @@ Currently, two official plugins are available:
 # Panel-admin-
 # Panel-admin-
 # Panel-admin-
+# Admin-panel
