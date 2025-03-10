@@ -1,4 +1,4 @@
-import { Banners, Brands, Categories, Dashboard, Products } from "../pages";
+import { Banners, Brands, Dashboard, Products } from "../pages";
 
 export const routes = [
     {
@@ -12,10 +12,6 @@ export const routes = [
     {
         path : "/brands",
         element:<Brands/>
-    },
-    {
-        path : "/categories",
-        element:<Categories/>
     },
     {
         path : "/products",

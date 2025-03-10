@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  UserOutlined,
 
 } from '@ant-design/icons';
-import { Button, Layout, Menu } from 'antd';
+import { Button, Layout, Menu, Flex, Avatar, Typography } from 'antd';
 import { menuSidebar } from '../constants/MenuSidebar'; 
 import { Route, Routes } from 'react-router-dom';
 import { routes } from '../constants/routes';
+import Logout from './../pages/Logout';
 const { Header, Sider, Content } = Layout;
 
 function MainLayout() {
@@ -29,6 +31,9 @@ const handleClick = () =>{
       <Header
         style={{
           padding: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
         }}
       >
         <Button
@@ -41,6 +46,12 @@ const handleClick = () =>{
             height: 64,
           }}
         />
+        <Logout>
+          <Flex align='center' gap={12} style={{cursor: "pointer"}}>
+            <Avatar size="large" icon={<UserOutlined/>}/>
+            <Typography>John Wick</Typography>
+          </Flex>
+        </Logout>
       </Header>
       <Content
         style={{

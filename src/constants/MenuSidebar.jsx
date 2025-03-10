@@ -1,5 +1,4 @@
 import {
-  SortAscendingOutlined ,
   DashboardOutlined,
   ProductOutlined ,
   BorderInnerOutlined,
@@ -17,11 +16,6 @@ export const menuSidebar = [
     key: '2',
     icon: <ProductOutlined />,
     label: <Link to = "/products">Products</Link>,
-  },
-  {
-    key: '3',
-    icon: <SortAscendingOutlined />,
-    label: <Link to = "/categories" >Categories</Link>,
   },
   {
     key: '4',

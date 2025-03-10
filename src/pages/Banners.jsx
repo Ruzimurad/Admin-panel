@@ -10,7 +10,7 @@ const { Meta } = Card;
 function Banners() {
   const [banners, setBanners] = useState([])
   const [isModalOpen, setIsModalOpen] = useState(false);
- const [editingData, setEditingData] = useState(null)
+ const [editingData, setEditingData] = useState(null);
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -18,9 +18,9 @@ function Banners() {
     setIsModalOpen(false);
   };
 
-  function getBanners() {
-    Axios.get(urls.banners.get).then(res => setBanners(res.data))
-  }
+   function getBanners() {
+     Axios.get(urls.banners.get).then(res => setBanners(res.data))
+   }
   console.log(banners);
   
 
@@ -38,8 +38,8 @@ function Banners() {
   }
 
   const handleEdit = (data) =>{
-    setEditingData(data)
-    setIsModalOpen(true)
+    setEditingData(data);
+    setIsModalOpen(true);
   }
   return (
     <>
@@ -63,17 +63,19 @@ function Banners() {
                 />
               }
               actions={[
-                <EditOutlined key="edit"  onClick={() => handleEdit(item)}/>,
+                <EditOutlined key="edit" onClick={() => handleEdit(item)} />,
                 <Popconfirm
-                title="Delete the task"
-                description="Are you sure to delete this task?"
-                onConfirm={() => onConfirm(record)}
-                okText="Yes"
-                cancelText="No"
-                ></Popconfirm>
+                  title="Delete the task"
+                  description="Are you sure to delete this task?"
+                  onConfirm={() => handleClick(item)}
+                  okText="Yes"
+                  cancelText="No"
+                >
+                  <DeleteOutlined key='delete' />
+                </Popconfirm>
+
               ]}
             >
-              <DeleteOutlined key="delete" onClick={() => handleClick(item)}/>
               <Meta title={item.name} />
             </Card>
           ))

@@ -1,4 +1,4 @@
-import { Button, Form, Input, Modal } from 'antd'
+import { Form, Input, Modal } from 'antd'
 import React, { useEffect } from 'react'
 import Axios from '../api';
 import { urls } from '../constants/urls';
@@ -28,13 +28,13 @@ function BannersModal({ isModalOpen, setIsModalOpen, getBanners, editingData, se
             })
                 .catch(err => console.log("Error:", err))
         }else{
-            Axios.patch(urls.banners.edit(editingData.id,),values) .then(res =>{
+            Axios.patch(urls.banners.edit(editingData.id),values) .then(res =>{
                 if(res.status === 200){
                     getBanners()
                 }
             })
         }
-        closeModal()
+        closeModal();
     }
     return (
 
