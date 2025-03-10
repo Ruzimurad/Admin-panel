@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 # Admin-panel
 # Panel-admin-
 # Panel-admin-
+# Panel-admin-
